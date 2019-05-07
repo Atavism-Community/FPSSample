@@ -167,7 +167,7 @@ namespace UnityEditor.Experimental.Rendering
                             if (s_RestoreSceneView != null)
                             {
                                 s_OldSceneDrawMode = s_RestoreSceneView.cameraMode;
-                                s_OldSceneLightingMode = s_RestoreSceneView.m_SceneLighting;
+                                s_OldSceneLightingMode = s_RestoreSceneView.sceneLighting;
                                 s_RestoreSceneView.cameraMode = SceneView.GetBuiltinCameraMode(DrawCameraMode.ShadowCascades);
                             }
                         }
@@ -187,7 +187,7 @@ namespace UnityEditor.Experimental.Rendering
                     if (s_RestoreSceneView != null)
                     {
                         s_RestoreSceneView.cameraMode = s_OldSceneDrawMode;
-                        s_RestoreSceneView.m_SceneLighting = s_OldSceneLightingMode;
+                        s_RestoreSceneView.sceneLighting = s_OldSceneLightingMode;
                         s_RestoreSceneView = null;
                     }
                     break;
